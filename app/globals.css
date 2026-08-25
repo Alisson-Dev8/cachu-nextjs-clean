@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+/*
+ * "Heritage Hearth" design system — Caciu Park Restaurante
+ * Warm Modernism: deep red + golden yellow accents on a cream base.
+ */
+
+:root {
+  --color-surface: #fff8f5;
+  --color-surface-container-low: #fbf2ed;
+  --color-surface-container: #f5ece7;
+  --color-surface-container-high: #efe6e2;
+  --color-surface-container-highest: #e9e1dc;
+  --color-surface-variant: #e9e1dc;
+
+  --color-on-surface: #1e1b18;
+  --color-on-surface-variant: #58413f;
+  --color-outline: #8b716e;
+  --color-outline-variant: #dfbfbc;
+
+  --color-primary: #5d0005;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #801515;
+  --color-on-primary-container: #ff8b81;
+
+  --color-secondary: #745b00;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fdcc16;
+  --color-on-secondary-container: #6e5700;
+  --color-secondary-fixed: #ffe08a;
+
+  --font-display: "Bebas Neue", ui-sans-serif, sans-serif;
+  --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-surface: var(--color-surface);
+  --color-surface-container-low: var(--color-surface-container-low);
+  --color-surface-container: var(--color-surface-container);
+  --color-surface-container-high: var(--color-surface-container-high);
+  --color-surface-container-highest: var(--color-surface-container-highest);
+  --color-surface-variant: var(--color-surface-variant);
+  --color-on-surface: var(--color-on-surface);
+  --color-on-surface-variant: var(--color-on-surface-variant);
+  --color-outline: var(--color-outline);
+  --color-outline-variant: var(--color-outline-variant);
+  --color-primary: var(--color-primary);
+  --color-on-primary: var(--color-on-primary);
+  --color-primary-container: var(--color-primary-container);
+  --color-on-primary-container: var(--color-on-primary-container);
+  --color-secondary: var(--color-secondary);
+  --color-on-secondary: var(--color-on-secondary);
+  --color-secondary-container: var(--color-secondary-container);
+  --color-on-secondary-container: var(--color-on-secondary-container);
+  --color-secondary-fixed: var(--color-secondary-fixed);
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-body);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+  }
+}
+
+/* Typography scale, mirrors DESIGN.md */
+@utility text-display-lg {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 9vw, 84px);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
+@utility text-headline-lg {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 48px);
+  line-height: 1.08;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+@utility text-headline-md {
+  font-family: var(--font-display);
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+@utility text-title-lg {
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+@utility text-body-lg {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+@utility text-body-md {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@utility text-label-bold {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+@utility text-caption {
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+@utility section-padding {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
