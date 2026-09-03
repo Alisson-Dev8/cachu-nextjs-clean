@@ -1,16 +1,33 @@
 import { SITE } from "@/lib/site";
 
+const LOGO_URL =
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuCjblBTWBOMOP995lYZ4D_ivR4lC4NobSvevMfdLAqqkyi9erCODOrOU6jSFaj5J2Lu5YHaNTSZECAe8TzFapZmLqggjim0wm91ZKkCcZv1G0LN2Xfs1KtfbvtZnsXXSgjk4vcBbNfpJ-XvqZOLxiBYTLxv6VaZe7L0bA2CpZr0DXw4-Xq-dg65gRa_hnqSc1bUMzGHOe3eJcYByu5COtJUI8RJ8_ze_0jVJV2WM9MWAGXxpg0e-ztANyQ01jGwffmNsw";
+
 export function SiteFooter() {
   return (
     <footer className="bg-primary-container text-on-primary-container w-full pt-10 md:pt-16 pb-6 text-body-sm">
       <div className="grid grid-cols-2 md:grid-cols-5 gap-8 px-5 md:px-6 max-w-[1280px] mx-auto mb-10">
         <div className="col-span-2 md:col-span-2">
-          <h2 className="text-title-xl font-bold text-secondary-container mb-1">{SITE.name}</h2>
           
-          {/* CNPJ abaixo do nome */}
-          <p className="text-on-primary-container/70 text-[11px] mb-3 font-mono">
-            CNPJ: {SITE.cnpj}
-          </p>
+          {/* Logo, Nome e CNPJ lado a lado */}
+          <div className="flex items-center gap-4 mb-3">
+            {/* Logo maior com margem/borda branca arredondada */}
+            <div className="bg-white p-1 rounded-2xl border-2 border-white shadow-md flex-shrink-0">
+              <img 
+                src={LOGO_URL}
+                alt={SITE.name} 
+                className="w-16 h-16 md:w-18 md:h-18 object-contain rounded-xl"
+              />
+            </div>
+
+            {/* Nome e CNPJ alinhados ao lado da logo */}
+            <div>
+              <h2 className="text-title-xl font-bold text-secondary-container leading-tight">{SITE.name}</h2>
+              <p className="text-on-primary-container/70 text-[11px] font-mono mt-0.5">
+                CNPJ: {SITE.cnpj}
+              </p>
+            </div>
+          </div>
 
           <p className="text-on-primary-container/80 max-w-xs mb-4 text-xs leading-relaxed">
             Marmitas caseiras feitas no dia, com tempero de casa e porção que mata a fome.
@@ -75,11 +92,11 @@ export function SiteFooter() {
             </li>
             <li>
               <a
-            href={`tel:+${SITE.phoneRaw}`}
-            className="block text-sm font-semibold text-on-primary hover:text-secondary-container transition-colors mb-4"
-          >
-            {SITE.phoneDisplay}
-          </a>
+                href={`tel:+${SITE.phoneRaw}`}
+                className="block text-sm font-semibold text-on-primary hover:text-secondary-container transition-colors mb-4"
+              >
+                {SITE.phoneDisplay}
+              </a>
             </li>
           </ul>
         </div>

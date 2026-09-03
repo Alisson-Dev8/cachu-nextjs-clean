@@ -24,7 +24,7 @@ export function SiteHeader() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             alt={`${SITE.name} logo`}
-            className="h-12 md:h-16 w-auto object-contain rounded-lg"
+            className="h-12 md:h-16 w-auto object-contain rounded-xl"
             src={LOGO_URL}
           />
           <span className="text-title-md md:text-title-lg font-bold text-primary tracking-tight hidden md:block">
