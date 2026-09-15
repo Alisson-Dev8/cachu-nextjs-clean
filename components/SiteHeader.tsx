@@ -8,7 +8,7 @@ const LOGO_URL =
 
 const NAV = [
   { href: "#hero", label: "Início" },
-  { href: "#menu", label: "Menu" },
+  { href: "#menu", label: "Novidades" },
   { href: "#about", label: "Nossa História" },
 ] as const;
 
